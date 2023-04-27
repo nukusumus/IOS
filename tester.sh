@@ -9,6 +9,7 @@ if [ ! -z $1 ]; then
         - zakaznik nesmi vejit, kdyz je posta zavrena
         - je stejny pocet "entering" a "serving"
         - btw se da poznat deadlock/jina chyba cekani - skript se zasekne
+        - nemusi testovat nulove parametry!
             
     Potrebne soubory:
         Ve stejne slozce musi byt makefile, Proj2.c a tento skript.
