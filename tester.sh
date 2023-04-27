@@ -23,7 +23,7 @@ if [ ! -z $1 ]; then
             - tiskne napovedu, konci
         ./tester.sh [-m] [N]
             - spusti test s danym poctem opakovani, vychozi hodnota je 50
-            - pokud je zadan prepinac -m, omezi max pocet procesu na 80, aby to fungovalo na merlinovi
+            - pokud je zadan prepinac -m, omezi max pocet procesu na 82, aby to fungovalo na merlinovi
 
     Disclaimer:
         Nemuzu zarucit uplnou spolehlivost, kdyztak dm @Nukusumus na Discordu\n"
