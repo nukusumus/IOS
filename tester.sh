@@ -17,9 +17,10 @@ if [ ! -z $1 ]; then
         Vytvori se slozka OUTPUT, kde se kopiruji mimoradne vystupy.
 
     Pouziti:
-        ./tester.sh [-h] [N]
-            -h: - tiskne napovedu, konci
-            N - pocet opakovani testu, vychozi je 50
+        ./tester.sh -h
+            - tiskne napovedu, konci
+        ./tester.sh [N]
+            - spusti test s danym poctem opakovani, vychozi hodnota je 50
 
     Disclaimer:
         Nemuzu zarucit uplnou spolehlivost, kdyztak dm @Nukusumus na Discordu\n"
