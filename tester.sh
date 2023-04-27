@@ -1,5 +1,7 @@
 #!/bin/bash
 
+max_proc=200
+
 if [ ! -z $1 ]; then
     if [ $1 == "-h" ]; then
         echo -e "
@@ -19,12 +21,18 @@ if [ ! -z $1 ]; then
     Pouziti:
         ./tester.sh -h
             - tiskne napovedu, konci
-        ./tester.sh [N]
+        ./tester.sh [-m] [N]
             - spusti test s danym poctem opakovani, vychozi hodnota je 50
+            - pokud je zadan prepinac -m, omezi max pocet procesu na 80, aby to fungovalo na merlinovi
 
     Disclaimer:
         Nemuzu zarucit uplnou spolehlivost, kdyztak dm @Nukusumus na Discordu\n"
         exit 0
+    fi
+
+    if [ $1 == "-m" ]; then # pro merlin
+        max_proc=80
+        shift
     fi
 fi
 
@@ -56,8 +64,8 @@ while [ $counter -lt $max_counter ]; do
 
     counter=$((counter + 1))
 
-    v=$((RANDOM % 80 + 1))
-    w=$((RANDOM % 80 + 1))
+    v=$((RANDOM % $max_proc + 1))
+    w=$((RANDOM % $max_proc + 1))
     x=$((RANDOM % (10000 / $counter)))
     y=$((RANDOM % 100))
     z=$((RANDOM % (10000 / $counter)))
