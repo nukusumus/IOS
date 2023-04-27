@@ -3,4 +3,4 @@
 - vsechno je vypsano v napovede ./tester.sh -h
 
 ## Zname bugy
-- na merlinnovi presahuje max. pocet spustenych procesu
+- na merlinovi presahuje max. pocet spustenych procesu
