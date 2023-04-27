@@ -66,7 +66,7 @@ while [ $counter -lt $max_counter ]; do
     echo -n "running: ./proj2 $v $w $x $y $z"
     ./proj2 $v $w $x $y $z
     if [ $? -eq 1 ]; then
-        echo "./proj2 $v $w $x $y $z -\u001b[31m ended with exit code 1\u001b[0m"
+        echo -e "./proj2 $v $w $x $y $z -\u001b[31m ended with exit code 1\u001b[0m"
         exit 1
     fi
 
