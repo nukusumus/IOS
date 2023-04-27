@@ -16,11 +16,11 @@
 ### Pouziti:
 - ./tester.sh -h
     - tiskne napovedu, konci
-- ./tester.sh [N]
+- ./tester.sh -m [N]
     - spusti test s danym poctem opakovani, vychozi hodnota je 50
+    - pokud je zadan prepinac -m, omezi max pocet procesu na 82, aby to fungovalo na merlinovi (default hodnota je 202)
 
 ### Disclaimer:
 - Nemuzu zarucit uplnou spolehlivost, bugy -> kdyztak do dm @Nukusumus na Discordu\n"
 
 ## Zname bugy
-- na merlinovi presahuje max. pocet spustenych procesu
