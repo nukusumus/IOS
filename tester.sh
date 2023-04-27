@@ -60,10 +60,8 @@ while [ $counter -lt $max_counter ]; do
     y=$((RANDOM % 100))
     z=$((RANDOM % (10000 / $counter)))
 
-    echo -n -e "\r"
     printf %\ 3d $counter
-    echo -n " [$(date +%H:%M:%S)] "
-    echo -n "running: ./proj2 $v $w $x $y $z"
+    echo " [$(date +%H:%M:%S)] running: ./proj2 $v $w $x $y $z"
     ./proj2 $v $w $x $y $z
     if [ $? -eq 1 ]; then
         echo -e "./proj2 $v $w $x $y $z -\u001b[31m ended with exit code 1\u001b[0m"
@@ -127,7 +125,7 @@ while [ $counter -lt $max_counter ]; do
         exit 1
     fi
 
-    echo -e "\n \u001b[32m[OK]\u001b[0m"
+    echo -e "\u001b[32m[OK]\u001b[0m"
 done
 
 echo -e "\n \u001b[32mTest OK\u001b[0m"
