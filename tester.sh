@@ -92,7 +92,7 @@ while [ $counter -lt $max_counter ]; do
     # urednik nesmi odpocivat po zavreni posty
 
     if [ -z $U_break ]; then
-        echo -e -n "\n \u001b[33m[INFO]\u001b[0m no officer taking break, output copied"
+        echo -e "\n \u001b[33m[INFO]\u001b[0m no officer taking break, output copied"
         cp proj2.out "OUTPUT/$counter-missing_officer_break"
     else
         if [ $U_break -ge $closing ]; then
@@ -105,12 +105,12 @@ while [ $counter -lt $max_counter ]; do
     # urednik nesmi jit domu pred zavrenim posty
 
     if [ -z $U_home ]; then
-        echo -e "\n \u001b[33m[FAIL]\u001b[0m no officer going home, output copied"
+        echo -e " \u001b[33m[FAIL]\u001b[0m no officer going home, output copied"
         cp proj2.out "OUTPUT/$counter-missing_officer_home"
         exit 1
     else
         if [ $U_home -lt $closing ]; then
-            echo -e "\n \u001b[31m[FAIL] \u001b[0mline $U_home: officer going home before closing, output copied"
+            echo -e " \u001b[31m[FAIL] \u001b[0mline $U_home: officer going home before closing, output copied"
             cp proj2.out "OUTPUT/$counter-home_before_closing"
             exit 1
         fi
@@ -119,18 +119,18 @@ while [ $counter -lt $max_counter ]; do
     # zakaznik nesmi vejit na postu po zavreni posty
 
     if [ -z $Z_enter ]; then
-        echo -e -n "\n \u001b[33m[INFO]\u001b[0m no customer entering, output copied"
+        echo -e " \u001b[33m[INFO]\u001b[0m no customer entering, output copied"
         cp proj2.out "OUTPUT/$counter-missing_customer_entering"
     else
         if [ $Z_enter -gt $closing ]; then
-            echo -e "\n \u001b[31m[FAIL] \u001b[0mline $Z_enter: customer entered after closing, output copied"
+            echo -e " \u001b[31m[FAIL] \u001b[0mline $Z_enter: customer entered after closing, output copied"
             cp proj2.out "OUTPUT/$counter-enter_after_close"
             exit 1
         fi
     fi
 
     if [ ! $NUM_of_entering -eq $NUM_of_serving ]; then
-        echo -e "\n \u001b[31m[FAIL] \u001b[0mdifferent number of \"entering\" and \"serving\", output copied"
+        echo -e " \u001b[31m[FAIL] \u001b[0mdifferent number of \"entering\" and \"serving\", output copied"
         cp proj2.out "OUTPUT/$counter-different_entering_serving"
         exit 1
     fi
@@ -138,5 +138,5 @@ while [ $counter -lt $max_counter ]; do
     echo -e "\u001b[32m[OK]\u001b[0m"
 done
 
-echo -e "\n \u001b[32mTest OK\u001b[0m"
+echo -e " \u001b[32mTest OK\u001b[0m"
 exit 0
