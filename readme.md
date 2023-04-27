@@ -1,0 +1,1 @@
+Zname bugy - na merlinnovi presahuje max. pocet spustenych procesu
