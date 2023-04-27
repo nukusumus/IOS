@@ -20,7 +20,7 @@
     - spusti test s danym poctem opakovani, vychozi hodnota je 50
 
 ### Disclaimer:
-- Nemuzu zarucit uplnou spolehlivost, kdyztak dm @Nukusumus na Discordu\n"
+- Nemuzu zarucit uplnou spolehlivost, bugy -> kdyztak do dm @Nukusumus na Discordu\n"
 
 ## Zname bugy
 - na merlinovi presahuje max. pocet spustenych procesu
