@@ -31,7 +31,7 @@ if [ ! -z $1 ]; then
     fi
 
     if [ $1 == "-m" ]; then # pro merlin
-        max_proc=80
+        max_proc=40
         shift
     fi
 fi
